@@ -17,26 +17,6 @@ const Video = mongoose.Schema({
     type: String,
     required: true,
   },
-  product: [
-    {
-      name: {
-        type: String,
-        required: true,
-      },
-      price: {
-        type: Number,
-        required: true,
-      },
-      thumbnail_url: {
-        type: String,
-        required: true,
-      },
-      product_link: {
-        type: String,
-        required: true,
-      },
-    },
-  ],
 });
 
 export default mongoose.model("Videos", Video);

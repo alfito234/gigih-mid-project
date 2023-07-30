@@ -1,23 +1,26 @@
 import mongoose from "mongoose";
 
-const Comment = mongoose.Schema({
+const Product = mongoose.Schema({
   video_id: {
     type: String,
     required: true,
   },
-  username: {
+  name: {
     type: String,
     required: true,
   },
-  comment: {
+  price: {
+    type: Number,
+    required: true,
+  },
+  thumbnail_url: {
     type: String,
     required: true,
   },
-  timestamp: {
-    type: Date,
-    default: Date.now,
+  product_link: {
+    type: String,
     required: true,
   },
 });
 
-export default mongoose.model("Comments", Comment);
+export default mongoose.model("Products", Product);
